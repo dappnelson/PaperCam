@@ -2,7 +2,7 @@ from ConfigParser import SafeConfigParser
 from Tkinter import Tk
 from tkFileDialog import askopenfilename
 
-INI_path = 'C:/Users/carter banks/Documents/GitHub/PaperCam/ToolChain/001_(DXF)z(TXT)config.ini'
+INI_path = '001_(DXF)z(TXT)config.ini'
 config = SafeConfigParser()
 config.read(INI_path)
 input_path = config.get('stored', 'input_path')
