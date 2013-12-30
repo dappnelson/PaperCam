@@ -14,7 +14,7 @@ output_path = config.get('stored', 'output_path')
 print'\ncurrent Input Path:\n\n>>>', input_path
 x = raw_input('\nAccept default Input Path <enter> \nor Browse for new Input Path <\'N\'>\n\n>>>')
 
-if x == 'n' or 'N':
+if x == 'n' or x == 'N':
 	Tk().withdraw() # keeps the root window from appearing
 	AAA = askopenfilename() # show "Open" dialog and return Path
 	input_path = str(AAA)
@@ -38,7 +38,7 @@ with open(input_path, "r") as f_111:
 print'current Output Path:\n\n>>>', output_path
 y = raw_input('\nAccept default Output Path <enter> \nor Browse for new Output Path <\'N\'>\n\n>>>')
 
-if y == 'n' or 'N':
+if y == 'n' or x == 'N':
 	Tk().withdraw() # keeps the root window from appearing
 	BBB = askopenfilename() # show "Open" dialog and return Path
 	output_path = str(BBB)
