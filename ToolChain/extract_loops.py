@@ -6,11 +6,11 @@ import os
 import shutil
 
 # RUNTIME OPTIONS
-INPUT_FILE = os.path.join('3D-ALL', '3D-(SCAD)z(mod).txt')
+INPUT_FILE = os.path.join('old_test_file', '3D-(SCAD)z(mod).txt')
 POINT_SEPARATION_THRESHOLD = 1 # maximum distance between points in a sequence (mm)
 SECTION_SEPARATION_THRESHOLD = 2 # maximum distance between endpoints (mm)
 VISUALIZE = True # display generated loops? (True/False)
-VERBOSE = True # include detailed program output? (True/False)
+VERBOSE = False # include detailed program output? (True/False)
 OVERWRITE = False # overwrite output directory if exists? (True/False)
 
 if VISUALIZE:
@@ -87,7 +87,7 @@ def get_loops_from_sections(loop_sections):
         end = section[-1]
         # see if ends meet. if so, save loop
         if distance(begin, end) < SECTION_SEPARATION_THRESHOLD: # done if ends meet
-            section.append(section[0]) # copy beginning of loop to end
+            #section = np.concatenate((section, section[0])) # copy beginning of loop to end
             loops.append(section)
             if VERBOSE: print(" ", len(loops), "loops extracted,", len(loop_sections), "loop sections remaining")
         # otherwise, stitch to an adjacent section
