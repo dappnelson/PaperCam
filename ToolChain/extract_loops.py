@@ -6,11 +6,11 @@ import os
 import shutil
 
 # RUNTIME OPTIONS
-INPUT_FILE = os.path.join('old_test_file', '3D-(SCAD)z(mod).txt')
-POINT_SEPARATION_THRESHOLD = 1 # maximum distance between points in a sequence (mm)
-SECTION_SEPARATION_THRESHOLD = 2 # maximum distance between endpoints (mm)
+INPUT_FILE = os.path.join('3D-ALL', '3D-(SCAD)z(mod).txt')
+POINT_SEPARATION_THRESHOLD = 1.1 # maximum distance between points in a sequence (mm)
+SECTION_SEPARATION_THRESHOLD = 2.2 # maximum distance between endpoints (mm)
 VISUALIZE = True # display generated loops? (True/False)
-VERBOSE = False # include detailed program output? (True/False)
+VERBOSE = True # include detailed program output? (True/False)
 OVERWRITE = False # overwrite output directory if exists? (True/False)
 
 if VISUALIZE:
@@ -119,17 +119,14 @@ def get_loops_from_sections(loop_sections):
             loop_sections.insert(0, section) # re-add section to list after stitching
     return loops
 
-def plot_loop(loop, loop_num):
+def plot_loop(ax, loop, title):
     """plot loop as 3D scatterplot"""
-    fig = plt.figure()
-    ax = fig.add_subplot(111, projection='3d')
     ax.scatter(loop[:, 0], loop[:, 1], loop[:, 2])
     ax.set_xlabel('mm')
     ax.set_ylabel('mm')
     ax.set_zlabel('mm')
-    ax.set_title('loop ' + str(loop_num))
+    ax.set_title(title)
     normalize_axes(ax)
-    plt.show(block=False)
     pass
 
 if __name__ == '__main__':
@@ -144,7 +141,14 @@ if __name__ == '__main__':
     if VISUALIZE:
         print("visualizing extracted loops...")
         for i, loop in enumerate(loops):
-            plot_loop(loop, i+1)
+            fig = plt.figure()
+            ax = fig.add_subplot(111, projection='3d')
+            plot_loop(ax, loop, 'loop ' + str(i+1))
+            plt.show(block=False)
+        fig = plt.figure()
+        ax = fig.add_subplot(111, projection='3d')
+        plot_loop(ax, points, 'all points')
+        plt.show(block=False)
     output_dir = ''.join(INPUT_FILE.split('.')[:-1]) + '_loops'
     if OVERWRITE:
         if os.path.exists(output_dir):
