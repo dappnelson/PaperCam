@@ -87,6 +87,7 @@ def get_loops_from_sections(loop_sections):
         end = section[-1]
         # see if ends meet. if so, save loop
         if distance(begin, end) < SECTION_SEPARATION_THRESHOLD: # done if ends meet
+            section.append(section[0]) # copy beginning of loop to end
             loops.append(section)
             if VERBOSE: print(" ", len(loops), "loops extracted,", len(loop_sections), "loop sections remaining")
         # otherwise, stitch to an adjacent section
