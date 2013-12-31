@@ -62,6 +62,7 @@ config.set('stored','output_path', output_path)
 with open(INI_path, 'wb') as configfile:
     config.write(configfile)
 print 'Any browsed-for Paths have been stored.\n'
+raw_input()
 
 
 
