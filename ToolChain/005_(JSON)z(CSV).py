@@ -1,3 +1,5 @@
+import json
+
 input_path = '004_(JSON).txt'
 output_path = '006_(CSV).txt'
 
