@@ -7,7 +7,7 @@ import shutil
 
 # RUNTIME OPTIONS
 INPUT_FILE = '100_(POINTS).txt'
-POINT_SEPARATION_THRESHOLD = 1.1 # maximum distance between points in a sequence (mm)
+POINT_SEPARATION_THRESHOLD = 1.5 # maximum distance between points in a sequence (mm)
 SECTION_SEPARATION_THRESHOLD = 2.2 # maximum distance between endpoints (mm)
 VISUALIZE = True # display generated loops? (True/False)
 VERBOSE = True # include detailed program output? (True/False)

@@ -12,7 +12,8 @@ with open(input_path, 'r') as f:
 print data
 
 with open(output_path, 'w') as g:
-    for line in data:
-        g.write(str(line[0]) + ', ' + str(line[1]) + ', ' + str(line[2]) + '\n')
+    for element in data:
+		if not element[0] == 0 and not element [1] == 0  and not element [2] == 0:
+			g.write(str(element[0]) + ', ' + str(element[1]) + ', ' + str(element[2]) + '\n')
 		
 os.startfile(output_path, 'open')
