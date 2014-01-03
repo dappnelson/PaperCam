@@ -1,5 +1,7 @@
-input_path = '002_(1-LINE).txt'
-output_path = '004_(JSON).txt'
+import os
+
+input_path = '002_(1LINE).txt'
+output_path = '004_(SETS).txt'
 
 d1 = 'points = '
 d2 = ', '
@@ -21,3 +23,5 @@ with open(output_path, "r") as h: #take 3-tuple part 1, after partitioning by d2
 
 with open(output_path, "w") as h: #overwrite to output_path
     h.write(pre_d2)
+	
+os.startfile(output_path, 'open')

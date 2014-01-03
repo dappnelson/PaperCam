@@ -1,5 +1,7 @@
-input_path = '004_(JSON).txt'
-output_path = '100_(POINTS).csv'
+import os
+
+input_path = '006_(POINTS).txt'
+output_path = '100_(POINTS).txt'
 
 
 fIn = open(input_path)  # use raw strings for windows file names
@@ -8,3 +10,5 @@ for line in fIn:
     fOut.write(line)
 fIn.close()
 fOut.close()
+
+os.startfile(output_path, 'open')

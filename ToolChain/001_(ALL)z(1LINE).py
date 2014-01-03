@@ -1,5 +1,7 @@
+import os
+
 input_path = '000_(ALL).scad'
-output_path = '002_(1-LINE).txt'
+output_path = '002_(1LINE).txt'
 starts_startswith = 'polyhedron'
 
 with open(input_path, "r") as f:
@@ -11,3 +13,5 @@ with open(input_path, "r") as f:
 			print SCAD
 			with open(output_path, "w") as g:
 				g.write(SCAD)
+				
+os.startfile(output_path, 'open')
