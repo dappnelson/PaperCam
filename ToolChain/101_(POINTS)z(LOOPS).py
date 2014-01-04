@@ -7,11 +7,11 @@ import shutil
 
 # RUNTIME OPTIONS
 INPUT_FILE = '100_(POINTS).txt'
-POINT_SEPARATION_THRESHOLD = 1.5 # maximum distance between points in a sequence (mm)
-SECTION_SEPARATION_THRESHOLD = 2.2 # maximum distance between endpoints (mm)
+POINT_SEPARATION_THRESHOLD = 0.059 # maximum distance between points in a sequence (in)
+SECTION_SEPARATION_THRESHOLD = 0.086 # maximum distance between endpoints (in)
 VISUALIZE = True # display generated loops? (True/False)
 VERBOSE = True # include detailed program output? (True/False)
-OVERWRITE = False # overwrite output directory if exists? (True/False)
+OVERWRITE = True # overwrite output directory if exists? (True/False)
 
 if VISUALIZE:
     print("loading visualization libraries...")
@@ -122,9 +122,9 @@ def get_loops_from_sections(loop_sections):
 def plot_loop(ax, loop, title):
     """plot loop as 3D scatterplot"""
     ax.scatter(loop[:, 0], loop[:, 1], loop[:, 2])
-    ax.set_xlabel('mm')
-    ax.set_ylabel('mm')
-    ax.set_zlabel('mm')
+    ax.set_xlabel('in')
+    ax.set_ylabel('in')
+    ax.set_zlabel('in')
     ax.set_title(title)
     normalize_axes(ax)
     pass
@@ -149,7 +149,7 @@ if __name__ == '__main__':
         ax = fig.add_subplot(111, projection='3d')
         plot_loop(ax, points, 'all points')
         plt.show(block=False)
-    output_dir = '100_LOOPS' #''.join(INPUT_FILE.split('.')[:-1]) + '_loops'
+    output_dir = '(103_LOOPS)' #''.join(INPUT_FILE.split('.')[:-1]) + '_loops'
     if OVERWRITE:
         if os.path.exists(output_dir):
             shutil.rmtree(output_dir)

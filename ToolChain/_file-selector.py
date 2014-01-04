@@ -10,31 +10,13 @@ input_path = config.get('stored', 'input_path')
 output_path = config.get('stored', 'output_path')
 	
 ############################################################ handle INPUT PATH
-print 'First, browse for input file.'
+print 'Browse for input file.'
 time.sleep(1)
 
 Tk().withdraw() # keeps the root window from appearing
 INI_in = askopenfilename() # show "Open" dialog and return Path
 input_path = str(INI_in)
 print '\n>>>', input_path
-print '\n\n'
-#raw_input()
-
-############################################################ process INPUT PATH contents, save to 'file_in_contents'
-with open(input_path, "r") as file_in:
-	file_in_contents = file_in.readlines()
-	file_in_contents = list(file_in_contents)
-	#print file_in_contents
-	#raw_input()
-
-############################################################ handle OUTPUT PATH
-print 'Now, browse for output file.'
-time.sleep(1)
-
-Tk().withdraw() # keeps the root window from appearing
-INI_out = askopenfilename() # show "Open" dialog and return Path
-input_path = str(INI_out)
-print '\n>>>', output_path
 print '\n\n'
 #raw_input()
 	
