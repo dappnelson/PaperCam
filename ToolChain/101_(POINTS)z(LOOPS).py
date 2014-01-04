@@ -149,7 +149,7 @@ if __name__ == '__main__':
         ax = fig.add_subplot(111, projection='3d')
         plot_loop(ax, points, 'all points')
         plt.show(block=False)
-    output_dir = '(103_LOOPS)' #''.join(INPUT_FILE.split('.')[:-1]) + '_loops'
+    output_dir = '102_(LOOPS)' #''.join(INPUT_FILE.split('.')[:-1]) + '_loops'
     if OVERWRITE:
         if os.path.exists(output_dir):
             shutil.rmtree(output_dir)
@@ -165,7 +165,7 @@ if __name__ == '__main__':
         output_file_name = os.path.join(output_dir, 'loop' + '_' + ('%02d' % (i+1)) + '.txt')
         with open(output_file_name, 'w') as f:
             for point in loop:
-                f.write(str(point[0]) + ', ' + str(point[1]) + ', ' + str(point[2]) + '\n')
+                f.write('M3, ' + str(point[0]) + ', ' + str(point[1]) + ', ' + str(point[2]) + '\n')
     print("writing complete.")
     if VISUALIZE:
         print("(close all open figures to exit program)")
