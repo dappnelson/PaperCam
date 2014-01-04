@@ -14,9 +14,8 @@ for filename in glob.glob(input_dir + '/*.txt'):
 			for line in f:
 				data.append(json.loads('[' + line.strip() + ']'))
 			print data
-			g.write(str(data) + '\n') #str(data[0]) + str(data[1]) + str(data[2]) + '\n')
+			g.write(str(data) + '\n') #str(element[0]) + str(element[1]) + str(element[2]) + '\n')
 			os.startfile(write_test, 'open')
-			raw_input()
 
 				
 				
