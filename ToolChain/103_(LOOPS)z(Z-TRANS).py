@@ -4,7 +4,7 @@ import os
 
 input_dir = '102_(LOOPS)'
 
-z_translate = raw_input('Enter dZ for translation: \n\n >>>')
+z_translate = float(raw_input('Enter dZ for translation: \n\n >>>'))
 
 for filename in glob.glob(input_dir + '/*.txt'):
 	write_test = filename + '.test'
@@ -16,12 +16,4 @@ for filename in glob.glob(input_dir + '/*.txt'):
 			print data
 			for element in data:
 				g.write(str(element[0]) + ', ' + str(element[1]) + ', ' + str(element[2]+z_translate) + '\n')
-
-				
-				
-				
-#	for element in data:
-#		print data
-#		#element = int(element)
-#		#g.write(str(element[0]+z_translate) + ', ' + str(element[1]+z_translate) + ', ' + str(element[2]+z_translate) + '\n')
-#os.startfile(write_test, 'open')
+			os.startfile(write_test, 'open')
