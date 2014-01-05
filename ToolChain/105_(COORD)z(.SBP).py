@@ -13,9 +13,10 @@ for filename in glob.glob(input_dir + '/*.txt'):
         with open(write_test , 'w') as g:
             data = []
             for line in f:
-                data.append(json.loads('[' + line.strip() + ']'))
+                print line
+                data.append(json.loads('[' + line + ']')) #data.append(json.loads('[' + line.strip() + ']'))
             for element in data:
-                g.write(str(element[0]) + str(element[1]) + ', ' + str(element[2]) + ', ' + str(element[3]+z_translate) + '\n')
+                g.write(str(element[0]) + ', '  + str(element[1]) + ', ' + str(element[2]) + ', ' + str(element[3]+z_translate) + '\n')
                 element = line.strip()
                 print element
             #os.system(str(write_test))
