@@ -162,7 +162,7 @@ if __name__ == '__main__':
     os.makedirs(output_dir)
     print("writing individual loops to output directory:", output_dir)
     for i, loop in enumerate(loops):
-        output_file_name = os.path.join(output_dir, 'loop' + '_' + ('%02d' % (i+1)) + '.txt')
+        output_file_name = os.path.join(output_dir, '102_(LOOPS' + '_' + ('%02d' % (i+1)) + ').txt')
         with open(output_file_name, 'w') as f:
             for point in loop:
                 f.write('"M3", ' + str(point[0]) + ', ' + str(point[1]) + ', ' + str(point[2]) + '\n')
