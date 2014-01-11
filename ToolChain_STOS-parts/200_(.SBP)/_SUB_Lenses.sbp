@@ -1,0 +1,40 @@
+'>>>Pass1 >>>LensL
+'JZ, 3.5
+'VA, ,,3.4
+FP, A200_(.SBP_LensL).sbp
+'JZ, 3.4
+'VA, ,,3.5
+'>>>Pass2
+JZ, 3.5
+VA, ,,3.525
+FP, A200_(.SBP_LensL).sbp
+JZ, 3.525
+VA, ,,3.5
+'>>>Pass3
+JZ, 3.5
+VA, ,,3.55
+FP, A200_(.SBP_LensL).sbp
+JZ, 3.55
+VA, ,,3.5
+
+'>>>Pass1 >>>LensR
+'JZ, 3.5
+'VA, ,,3.4
+FP, A200_(.SBP_LensR).sbp
+'JZ, 3.4
+'VA, ,,3.5
+'>>>Pass2
+JZ, 3.5
+VA, ,,3.525
+FP, A200_(.SBP_LensR).sbp
+JZ, 3.525
+VA, ,,3.5
+'>>>Pass3
+JZ, 3.5
+VA, ,,3.55
+FP, A200_(.SBP_LensR).sbp
+JZ, 3.55
+VA, ,,3.5
+
+JZ, 3.5
+J2, 0, 0

@@ -1,0 +1,14 @@
+'Jog SB out of the way
+JZ, 3.5
+J2, 20.0, 0.0
+
+'Spindle Warning
+INPUT "TURN SPINDLE [--ON--] !!" &showpad
+FP, _SUB__regHoles.sbp
+	
+'_SUB_Left
+JZ, 3.5
+VA, ,,3.8
+FP, _SUB_Left.sbp
+JZ, 3.8
+VA, ,,3.5

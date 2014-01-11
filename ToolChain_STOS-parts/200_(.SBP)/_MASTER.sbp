@@ -1,0 +1,13 @@
+''''''''''''''''STOS MASTER''''''''''''''''
+
+	'_MASTER_01-Left
+FP, _MASTER_01-Left.sbp
+
+	'_MASTER_02-Right
+FP, _MASTER_02-Right.sbp
+
+	'_MASTER_03-Lenses
+FP, _MASTER_03-Lenses.sbp
+
+	'_MASTER_04-Frame
+FP, _MASTER_04-Frame.sbp

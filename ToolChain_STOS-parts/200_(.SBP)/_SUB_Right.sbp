@@ -1,0 +1,48 @@
+'>>>Pass1 >>>NoseR
+JZ, 3.5
+FP, A200_(.SBP_NoseR).sbp
+'>>>Pass2
+JZ, 3.5
+VA, ,,3.7
+FP, A200_(.SBP_NoseR).sbp
+JZ, 3.7
+VA, ,,3.5
+
+'>>>Pass1 >>>InsertR
+JZ, 3.5
+FP, A200_(.SBP_InsertR).sbp
+'>>>Pass2
+JZ, 3.5
+VA, ,,3.7
+FP, A200_(.SBP_InsertR).sbp
+JZ, 3.7
+VA, ,,3.5
+
+'>>>Pass1 >>>EyeR
+JZ, 3.5
+FP, A200_(.SBP_EyeR).sbp
+'>>>Pass2
+JZ, 3.5
+VA, ,,3.7
+FP, A200_(.SBP_EyeR).sbp
+JZ, 3.7
+VA, ,,3.5
+
+'>>>Pass1 >>>EarRA
+JZ, 3.5
+FP, A200_(.SBP_EarRA).sbp
+'>>>Pass2
+JZ, 3.5
+VA, ,,3.7
+FP, A200_(.SBP_EarRA).sbp
+JZ, 3.7
+VA, ,,3.5
+'>>>Pass1 >>>EarRB
+JZ, 3.5
+FP, A200_(.SBP_EarRB).sbp
+'>>>Pass2
+JZ, 3.5
+VA, ,,3.7
+FP, A200_(.SBP_EarRB).sbp
+JZ, 3.7
+VA, ,,3.5

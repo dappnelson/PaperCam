@@ -1,0 +1,12 @@
+'>>>Pass1 >>>Frame
+JZ, 3.5
+FP, A200_(.SBP_Frame).sbp
+'>>>Pass2
+JZ, 3.5
+VA, ,,3.7
+FP, A200_(.SBP_Frame).sbp
+JZ, 3.7
+VA, ,,3.5
+
+'Get Cutter Out-of-the-way
+J2, 20, 0

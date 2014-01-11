@@ -1,0 +1,17 @@
+'Move Cutter to ToolChange Position
+JZ, 3.5
+J2, 2,11.75
+JZ, 2
+
+'"TURN SPINDLE [--OFF!--]" warning
+INPUT "TURN SPINDLE [--OFF!--]" &showpad
+
+'Z-Zero Routine
+C2
+
+'"TURN SPINDLE [--ON!--]" warning
+INPUT "TURN SPINDLE [--ON!--]" &showpad
+
+'Move Cutter to Home Position
+JZ, 3.5
+J2, 0, 0
