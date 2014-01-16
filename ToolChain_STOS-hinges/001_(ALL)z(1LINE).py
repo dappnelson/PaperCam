@@ -1,6 +1,6 @@
 import os
 
-input_path = '000-Objects-MoldCurve2.1-hingeFIXT.scad'
+input_path = '000-(ALL).scad'
 output_path = '002_(1LINE).txt'
 starts_startswith = 'polyhedron'
 
